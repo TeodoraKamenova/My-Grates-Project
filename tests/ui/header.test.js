@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test.only('Check header', async ({ page }) => {
+test('Check header', async ({ page }) => {
     await page.goto('http://localhost:8090'); 
     const homeLink = await page.$('header');
     const text = await homeLink.textContent();
